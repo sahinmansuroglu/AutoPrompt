@@ -45,7 +45,9 @@ public class SampleTest extends SetUp  {
         String command2="cd "+  ScriptPath +" && name < Data.txt";
         String command3="bash -c \" cd /mnt/d/BashTest && ./questions.sh < Data.txt\"";
 
-
+        //Denememmm
+        //Denememmm
+        //Denememmm
         Process pro=null;
         pro = cli.cli(tool, command3);
         List<String> actualOutput = null;
