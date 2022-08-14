@@ -32,7 +32,7 @@ public class SampleTest extends SetUp  {
     public void studentRegistration(String name, String fav, int birthDate ,String LogType)
     {
         try {
-            createTestDataItemFile( name, fav, birthDate,true);
+            createTestDataItemFile( name, fav, birthDate,false);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -53,7 +53,7 @@ public class SampleTest extends SetUp  {
         //Denememmm
         //Denememmm
         Process pro=null;
-        pro = cli.cli(tool, command3);
+        pro = cli.cli(tool, command2);
         List<String> actualOutput = null;
 
            if (LogType.equalsIgnoreCase("error")){
