@@ -15,7 +15,7 @@ import java.util.List;
 
 public class SampleTest extends SetUp  {
 
-    String ScriptPath="D:\\BashTest";
+    String ScriptPath = System.getProperty("user.dir") + "\\src\\BashBatchScript";
 
 
     public  void createTestDataItemFile(String name, String fav, int birthDate,boolean isForUnix) throws IOException {
@@ -42,8 +42,12 @@ public class SampleTest extends SetUp  {
         expectedKeywordList.add("Your age:"+(2022-birthDate));
 
      //   String command1="cd "+  ScriptPath +" && bash -c \" printf '"+name+"\\n"+fav+"\\n"+birthDate+"' | ./questions.sh\"";
+       // String command2="cd "+  ScriptPath +" && name < Data.txt";
+     //   String command3="bash -c \" cd /mnt/d/BashTest && ./questions.sh < Data.txt\"";
+
         String command2="cd "+  ScriptPath +" && name < Data.txt";
-        String command3="bash -c \" cd /mnt/d/BashTest && ./questions.sh < Data.txt\"";
+        String ScriptPathLinux = "/mnt/d/MertToolBase/Projects/AutoReplyPrompt/src/BashBatchScript";
+        String command3="bash -c  \" cd " + ScriptPathLinux + "  && ./questions.sh < Data.txt\"";
 
         //Denememmm
         //Denememmm
